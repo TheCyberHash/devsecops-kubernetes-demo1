@@ -32,17 +32,11 @@ pipeline {
         }
       }
     }
-  node {
-  stage('SCM') {
-    checkout scm
-  }
-  stage('SonarQube - SAST') {
-    def mvn = tool 'maven-numeric-app';
-    withSonarQubeEnv() {
-      sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=numeric-application -Dsonar.projectName='numeric-application'"
+ stage('SonarQube - SAST') {
+      steps {
+        sh "mvn sonar:sonar -Dsonar.projectKey=numeric-application -Dsonar.host.url=http://devsecops-demo.eastus.cloudapp.azure.com:9000 -Dsonar.login=sqp_a38dffa2430909f930f991a772a7546ce21e699e"
+      }
     }
-  }
-}
     stage('Docker Build and Push') {
       steps {
         withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
