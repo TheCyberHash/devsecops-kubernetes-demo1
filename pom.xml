@@ -90,7 +90,7 @@
 			</plugin>
 
 		<!-- Adding Dependency Check to pom.xml   -->
-<!--                   Dependency Check Plugin                   -->
+
 			<plugin>
   				 <groupId>org.owasp</groupId>
   				 <artifactId>dependency-check-maven</artifactId>
