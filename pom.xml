@@ -89,7 +89,7 @@
   				 </configuration>
 			</plugin>
 
-			## Adding Dependency Check to pom.xml
+		<!-- Adding Dependency Check to pom.xml   -->
 <!--                   Dependency Check Plugin                   -->
 			<plugin>
   				 <groupId>org.owasp</groupId>
