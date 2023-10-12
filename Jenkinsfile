@@ -1,4 +1,4 @@
-## Jenkinsfile - Added Dependency Check Stage - Vulnerabilities Stage
+// Jenkinsfile - Added Dependency Check Stage - Vulnerabilities Stage
 
 pipeline {
   agent any
